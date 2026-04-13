@@ -15,54 +15,93 @@ eleventyComputed:
 </section>
 
 <section class="legal-page">
-  <p class="meta"><strong>These terms are a stub pending legal review. Not yet final.</strong></p>
+  <p class="meta"><strong>These Terms are provided as a standard template. Review with qualified counsel before relying on them for any specific matter.</strong></p>
 
   <h2>1. Agreement</h2>
-  <p>These Terms of Service ("Terms") govern your use of {{ app.name }} ("the App"), a mobile application published by Mojibake Inc. ("Mojibake," "we," "us," or "our"). By downloading, installing, or using the App you agree to these Terms. If you do not agree, do not use the App.</p>
+  <p>These Terms of Service ("Terms") govern your use of {{ app.name }} ("the App"), a mobile application published by {{ app.legal_entity }} ("Mojibake," "we," "us," or "our"). By downloading, installing, accessing, or using the App you agree to these Terms and to our <a href="/privacy/{{ app.slug }}">Privacy Policy</a>, which is incorporated by reference. If you do not agree, do not use the App.</p>
 
   <h2>2. Eligibility</h2>
-  <p>You must be at least 13 years old (or the minimum age required in your country) to use the App. By using the App, you represent that you meet this requirement.</p>
+  <p>You must be at least 13 years old (or the minimum age required in your country) to use the App. If you are under the age of majority in your jurisdiction, you may use the App only with the involvement of a parent or legal guardian who agrees to these Terms on your behalf. By using the App, you represent that you meet these requirements.</p>
 
-  <h2>3. License</h2>
-  <p>Mojibake grants you a limited, non-exclusive, non-transferable, revocable license to use the App on devices you own or control, solely for your personal, non-commercial use and subject to these Terms.</p>
+  {% if app.category == "wine_alcohol" %}
+  <h2>3. Legal drinking age</h2>
+  <p>{{ app.name }} provides information about alcoholic beverages. You represent and warrant that you are of legal drinking age in your jurisdiction (21 years of age in the United States; the applicable legal age elsewhere). Do not use {{ app.name }} if you are not of legal drinking age.</p>
+  <p><strong>No alcohol sales; informational only.</strong> {{ app.name }} does not sell, deliver, or facilitate the sale of alcohol. Recommendations, ratings, tasting notes, and value assessments are for informational purposes only and reflect subjective opinions. We make no warranty that any wine will be available, accurately priced, or suited to your preferences. You are solely responsible for any purchase, consumption, or other decision you make based on information in the App. Please drink responsibly and never drink and drive.</p>
+  {% elif app.category == "wellness" %}
+  <h2>3. Not medical, mental health, or professional advice</h2>
+  <p>{{ app.name }} is a wellness, inspiration, and self-reflection tool. <strong>It is not medical advice, mental-health treatment, psychotherapy, diagnosis, or a substitute for care from a qualified professional.</strong> Do not use the App to diagnose or treat any health or mental-health condition.</p>
+  <p>If you are experiencing a crisis or are in need of urgent care, contact your local emergency services. In the United States, call or text <strong>988</strong> to reach the Suicide & Crisis Lifeline. Outside the United States, contact your local crisis line or emergency services.</p>
+  <p>Any decision you make based on content in the App is your own. Always consult a qualified professional before making changes to your mental or physical health care.</p>
+  {% endif %}
 
-  <h2>4. Subscriptions</h2>
+  <h2>4. License</h2>
+  <p>Mojibake grants you a limited, non-exclusive, non-transferable, non-sublicensable, revocable license to install and use the App on devices that you own or control, solely for your personal, non-commercial use and subject to these Terms. All rights not expressly granted are reserved.</p>
+  <p><strong>Apple end-user license.</strong> If you obtained the App through the Apple App Store, these Terms incorporate Apple's Licensed Application End User License Agreement (the "Standard EULA"), available at <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">apple.com/legal/internet-services/itunes/dev/stdeula</a>. In the event of a conflict between these Terms and the Standard EULA, these Terms control to the extent permitted. You acknowledge that these Terms are between you and Mojibake only, not Apple, and that Apple is a third-party beneficiary entitled to enforce them against you.</p>
+
+  <h2>5. Subscriptions, trials, and pricing</h2>
   <p>{{ app.name }} offers auto-renewing subscriptions through the Apple App Store. By purchasing a subscription you agree that:</p>
   <ul>
     <li>Payment is charged to your Apple ID account at confirmation of purchase.</li>
     <li>Your subscription automatically renews at the end of each billing period unless you cancel at least 24 hours before the renewal date.</li>
-    <li>Your Apple ID account is charged for renewal within 24 hours prior to the end of the current period, at the price of the selected plan.</li>
-    <li>You can manage and cancel subscriptions in your Apple ID account settings after purchase.</li>
+    <li>Your Apple ID is charged for renewal within 24 hours prior to the end of the current period, at the price of the selected plan.</li>
+    <li>You can manage or cancel subscriptions in your Apple ID account settings after purchase.</li>
     <li>No refund is provided for the unused portion of the current subscription period, except where required by applicable law.</li>
   </ul>
-  <p>Refund requests are handled by Apple. Visit <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> to request a refund.</p>
+  <p><strong>Free trials.</strong> If your subscription includes a free or introductory trial, the trial converts to a paid subscription automatically at the end of the trial period unless you cancel at least 24 hours before the trial ends. You may forfeit unused trial time if you upgrade earlier.</p>
+  <p><strong>Price changes.</strong> We may change subscription pricing. Price increases that meet Apple's thresholds require your affirmative consent before taking effect; other changes will be communicated in advance as required by applicable law. If you do not accept a price change, you may cancel your subscription before the change takes effect.</p>
+  <p>Refund requests are generally handled by Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
 
-  <h2>5. User content</h2>
-  <p>You retain ownership of any content you create in the App ("Your Content"). You grant Mojibake a non-exclusive, worldwide, royalty-free license to store, process, and display Your Content solely for the purpose of providing the App to you.</p>
+  <h2>6. Your content</h2>
+  <p>You retain ownership of content you create in the App ("Your Content"). You grant Mojibake a non-exclusive, worldwide, royalty-free license to host, store, process, transmit, and display Your Content solely to provide and improve the App. You represent that you have the rights necessary to grant this license and that Your Content does not violate any law or third-party right.</p>
 
-  <h2>6. Acceptable use</h2>
-  <p>You agree not to: (a) reverse engineer, decompile, or disassemble the App; (b) use the App to violate any law or the rights of others; (c) interfere with or disrupt the App's infrastructure; or (d) attempt to gain unauthorized access to any portion of the App.</p>
+  <h2>7. Acceptable use</h2>
+  <p>You agree not to: (a) reverse engineer, decompile, or disassemble the App except to the extent permitted by applicable law; (b) use the App to violate any law or the rights of others; (c) interfere with or disrupt the App or its infrastructure; (d) attempt to gain unauthorized access to any portion of the App or to other users' accounts or data; or (e) use any automated means to access, scrape, or harvest content from the App.</p>
 
-  <h2>7. Intellectual property</h2>
-  <p>The App, including all software, design, text, graphics, and other content (other than Your Content), is owned by Mojibake or its licensors and is protected by copyright, trademark, and other laws. No rights are granted to you except as expressly set forth in these Terms.</p>
+  <h2>8. Third-party services</h2>
+  <p>The App relies on third-party services, which may include Apple, Google Cloud Platform, Anthropic's Claude AI, and payment processors. These services are subject to their own terms and privacy practices. Mojibake is not responsible for the availability, accuracy, or conduct of third-party services, and any disputes regarding third-party services should be directed to those providers.</p>
 
-  <h2>8. Disclaimers</h2>
-  <p>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED. MOJIBAKE DISCLAIMS ALL WARRANTIES INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. MOJIBAKE DOES NOT WARRANT THAT THE APP WILL BE UNINTERRUPTED, ERROR-FREE, OR SECURE.</p>
+  <h2>9. Intellectual property</h2>
+  <p>The App — including all software, design, text, graphics, audio, Henri branding, SnapScore, and other content (other than Your Content) — is owned by Mojibake or its licensors and is protected by copyright, trademark, and other laws. No rights are granted to you except as expressly set forth in these Terms.</p>
 
-  <h2>9. Limitation of liability</h2>
-  <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, MOJIBAKE SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, ARISING OUT OF OR RELATED TO YOUR USE OF THE APP. MOJIBAKE'S TOTAL LIABILITY SHALL NOT EXCEED THE AMOUNT YOU PAID TO MOJIBAKE IN THE TWELVE MONTHS PRECEDING THE CLAIM.</p>
+  <h2>10. Disclaimers</h2>
+  <p>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. MOJIBAKE DISCLAIMS ALL WARRANTIES INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. MOJIBAKE DOES NOT WARRANT THAT THE APP WILL BE UNINTERRUPTED, ERROR-FREE, OR SECURE, OR THAT ANY DEFECT WILL BE CORRECTED.</p>
 
-  <h2>10. Termination</h2>
-  <p>We may suspend or terminate your access to the App at any time, with or without notice, for any reason including violation of these Terms. Upon termination, your right to use the App ceases immediately.</p>
+  <h2>11. Limitation of liability</h2>
+  <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, MOJIBAKE SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, REVENUE, DATA, OR GOODWILL, ARISING OUT OF OR RELATED TO YOUR USE OF THE APP. MOJIBAKE'S TOTAL AGGREGATE LIABILITY FOR ANY CLAIM ARISING OUT OF OR RELATED TO THESE TERMS OR THE APP SHALL NOT EXCEED THE GREATER OF (A) THE AMOUNT YOU PAID MOJIBAKE IN THE TWELVE MONTHS PRECEDING THE CLAIM OR (B) ONE HUNDRED US DOLLARS ($100). SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF CERTAIN DAMAGES, SO PORTIONS OF THIS SECTION MAY NOT APPLY TO YOU.</p>
 
-  <h2>11. Changes</h2>
-  <p>We may revise these Terms from time to time. We will post the updated Terms on this page with a new effective date. Your continued use of the App after changes take effect constitutes acceptance of the revised Terms.</p>
+  <h2>12. Indemnification</h2>
+  <p>You agree to defend, indemnify, and hold harmless Mojibake and its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses (including reasonable attorneys' fees) arising out of or related to your violation of these Terms, your misuse of the App, or your violation of any law or third-party right.</p>
 
-  <h2>12. Governing law</h2>
-  <p>These Terms are governed by the laws of the State of Delaware, USA, without regard to conflict-of-law principles. Any dispute shall be resolved in the state or federal courts located in Delaware.</p>
+  <h2>13. Termination</h2>
+  <p>We may suspend or terminate your access to the App at any time, with or without notice, for any reason, including violation of these Terms. You may stop using the App at any time. Upon termination, your right to use the App ceases immediately. Sections of these Terms that by their nature should survive termination (including intellectual property, disclaimers, limitation of liability, indemnification, and dispute resolution) will survive.</p>
 
-  <h2>13. Contact</h2>
-  <p>Questions about these Terms? Email <a href="mailto:{{ app.support_email }}">{{ app.support_email }}</a>.</p>
+  <h2>14. Dispute resolution — arbitration and class-action waiver</h2>
+  <p><strong>Please read this section carefully. It affects your legal rights.</strong></p>
+  <p><strong>a. Informal resolution.</strong> Before filing a claim, you agree to try to resolve the dispute informally by emailing <a href="mailto:legal@mojibake.ai">legal@mojibake.ai</a> with a description of the claim. We'll try to resolve the dispute within 60 days of receipt.</p>
+  <p><strong>b. Binding arbitration.</strong> If informal resolution fails, you and Mojibake agree that any dispute, claim, or controversy arising out of or relating to these Terms or the App will be resolved exclusively by final and binding arbitration administered by the American Arbitration Association ("AAA") under its Consumer Arbitration Rules, rather than in court, except as provided below. The arbitration will be conducted in English, seated in Delaware (or by video hearing), and governed by the Federal Arbitration Act. Judgment on the award may be entered in any court of competent jurisdiction.</p>
+  <p><strong>c. Class-action waiver.</strong> YOU AND MOJIBAKE AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN AN INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING. The arbitrator may not consolidate claims or preside over any form of class or representative proceeding.</p>
+  <p><strong>d. Exceptions.</strong> Either party may bring an individual claim in small-claims court if it qualifies. Either party may seek injunctive or equitable relief in court to protect intellectual property rights. If the class-action waiver is found unenforceable as to any claim, that claim will be severed and heard in court; all other claims remain subject to arbitration.</p>
+  <p><strong>e. Opt-out.</strong> You may opt out of this arbitration agreement by sending written notice to <a href="mailto:legal@mojibake.ai">legal@mojibake.ai</a> within 30 days of first accepting these Terms. Opting out will not affect any other provision of these Terms.</p>
+
+  <h2>15. Governing law and venue</h2>
+  <p>These Terms are governed by the laws of the State of Delaware, USA, without regard to conflict-of-law principles, except that the Federal Arbitration Act governs the arbitration agreement in Section 14. For any matter not subject to arbitration, the state and federal courts located in Delaware have exclusive jurisdiction, and you consent to personal jurisdiction there.</p>
+
+  <h2>16. California residents</h2>
+  <p>California Civil Code Section 1789.3 requires us to disclose: the Complaint Assistance Unit of the Division of Consumer Services of the California Department of Consumer Affairs may be contacted in writing at 1625 North Market Blvd., Suite N 112, Sacramento, CA 95834, or by telephone at (800) 952-5210.</p>
+
+  <h2>17. Changes to these Terms</h2>
+  <p>We may revise these Terms from time to time. Material changes will be communicated through the App or by updating the effective date above. Your continued use of the App after changes take effect constitutes acceptance of the revised Terms.</p>
+
+  <h2>18. Miscellaneous</h2>
+  <p><strong>Entire agreement.</strong> These Terms, together with the Privacy Policy, are the entire agreement between you and Mojibake regarding the App and supersede any prior agreements.</p>
+  <p><strong>Severability.</strong> If any provision is held invalid or unenforceable, the remaining provisions will remain in full force and effect.</p>
+  <p><strong>No waiver.</strong> Our failure to enforce any right or provision is not a waiver of that right or provision.</p>
+  <p><strong>Assignment.</strong> You may not assign or transfer these Terms without our prior written consent. We may assign these Terms, in whole or in part, without restriction.</p>
+  <p><strong>Force majeure.</strong> We are not liable for any failure or delay caused by events beyond our reasonable control.</p>
+  <p><strong>Notices.</strong> Notices to Mojibake must be sent to <a href="mailto:legal@mojibake.ai">legal@mojibake.ai</a>. Notices to you may be sent to the email associated with your account or delivered through the App.</p>
+
+  <h2>19. Contact</h2>
+  <p>Questions about these Terms? Email <a href="mailto:{{ app.support_email }}">{{ app.support_email }}</a> or <a href="mailto:legal@mojibake.ai">legal@mojibake.ai</a>.</p>
 
   {% include "app-footer.njk" %}
 </section>

@@ -2,6 +2,7 @@
   {
     "slug": "sommsnap",
     "name": "SommSnap",
+    "category": "wine_alcohol",
     "tagline": "Your pocket sommelier.",
     "description": "Photograph any wine list, bottle, or shelf and get personalized recommendations from Henri, your AI sommelier.",
     "features": [
@@ -16,11 +17,13 @@
     "app_store_url": null,
     "marketing_url": "https://sommsnap.com",
     "support_email": "support@sommsnap.com",
+    "legal_entity": "Mojibake Inc.",
     "screenshots": []
   },
   {
     "slug": "inspiration-and-gratitude",
     "name": "Inspiration & Gratitude",
+    "category": "wellness",
     "tagline": "A gentler way to begin each day.",
     "description": "Daily inspiration paired with guided gratitude reflections. Build a warm, sustainable practice that fits into real life.",
     "features": [
@@ -32,13 +35,15 @@
     "subscription": "Free tier + premium subscription.",
     "app_store_id": null,
     "app_store_url": null,
-    "marketing_url": null,
+    "marketing_url": "https://mojibake.ai/apps/inspiration-and-gratitude/",
     "support_email": "support@mojibake.ai",
+    "legal_entity": "Mojibake Inc.",
     "screenshots": []
   },
   {
     "slug": "science-of-being-great",
     "name": "Science of Being Great",
+    "category": "wellness",
     "tagline": "A guided practice rooted in Wallace D. Wattles' classic.",
     "description": "A modern, guided companion to The Science of Being Great — with readings, reflections, and daily practices designed to build character, confidence, and clarity.",
     "features": [
@@ -50,8 +55,9 @@
     "subscription": "Free tier + premium subscription.",
     "app_store_id": null,
     "app_store_url": null,
-    "marketing_url": null,
+    "marketing_url": "https://mojibake.ai/apps/science-of-being-great/",
     "support_email": "support@mojibake.ai",
+    "legal_entity": "Mojibake Inc.",
     "screenshots": []
   }
 ]
