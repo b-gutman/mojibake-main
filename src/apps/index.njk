@@ -1,0 +1,20 @@
+---
+layout: layout.njk
+title: Apps – mojibake.ai
+description: Simple, beautiful iOS apps from Mojibake.
+permalink: /apps/
+---
+
+<section class="page-hero">
+  <h1>Apps</h1>
+  <p class="lede">Simple, beautiful tools that decode everyday friction.</p>
+</section>
+
+<section class="apps-grid">
+  {% for app in apps %}
+  <a href="/apps/{{ app.slug }}/" class="app-card">
+    <h3>{{ app.name }}</h3>
+    <p>{{ app.tagline }}</p>
+  </a>
+  {% endfor %}
+</section>

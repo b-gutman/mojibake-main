@@ -1,0 +1,18 @@
+---
+layout: layout.njk
+title: Privacy Policies – mojibake.ai
+permalink: /privacy/
+---
+
+<section class="page-hero">
+  <h1>Privacy Policies</h1>
+  <p class="lede">Each Mojibake app has its own privacy policy.</p>
+</section>
+
+<section class="legal-page">
+  <ul class="legal-index">
+    {% for app in apps %}
+    <li><a href="/privacy/{{ app.slug }}">{{ app.name }}</a></li>
+    {% endfor %}
+  </ul>
+</section>

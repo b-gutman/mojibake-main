@@ -1,0 +1,22 @@
+---
+layout: layout.njk
+title: Support – mojibake.ai
+permalink: /support/
+---
+
+<section class="page-hero">
+  <h1>Support</h1>
+  <p class="lede">We're here to help. Pick your app, or get in touch directly.</p>
+</section>
+
+<section class="legal-page">
+  <h2>Per-app support</h2>
+  <ul class="legal-index">
+    {% for app in apps %}
+    <li><a href="/support/{{ app.slug }}/">{{ app.name }}</a></li>
+    {% endfor %}
+  </ul>
+
+  <h2>General contact</h2>
+  <p>Email <a href="mailto:support@mojibake.ai">support@mojibake.ai</a> or use the form on the <a href="/#contact">homepage</a>.</p>
+</section>

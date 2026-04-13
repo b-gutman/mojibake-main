@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "sommsnap",
+    "name": "SommSnap",
+    "tagline": "Your pocket sommelier.",
+    "description": "Photograph any wine list, bottle, or shelf and get personalized recommendations from Henri, your AI sommelier.",
+    "features": [
+      "Scan restaurant wine lists for instant recommendations",
+      "Analyze individual bottles with detailed tasting notes",
+      "Scan store shelves to find the best value",
+      "Party mode for group selections",
+      "Proprietary SnapScore ratings (0-100)"
+    ],
+    "subscription": "Free tier + 4 paid tiers up to Master Cellar ($299.99/year).",
+    "app_store_id": null,
+    "app_store_url": null,
+    "marketing_url": "https://sommsnap.com",
+    "support_email": "support@sommsnap.com",
+    "screenshots": []
+  },
+  {
+    "slug": "inspiration-and-gratitude",
+    "name": "Inspiration & Gratitude",
+    "tagline": "A gentler way to begin each day.",
+    "description": "Daily inspiration paired with guided gratitude reflections. Build a warm, sustainable practice that fits into real life.",
+    "features": [
+      "Curated daily inspiration prompts",
+      "Guided gratitude journaling",
+      "Streaks and gentle reminders",
+      "Private by design — your reflections stay yours"
+    ],
+    "subscription": "Free tier + premium subscription.",
+    "app_store_id": null,
+    "app_store_url": null,
+    "marketing_url": null,
+    "support_email": "support@mojibake.ai",
+    "screenshots": []
+  },
+  {
+    "slug": "science-of-being-great",
+    "name": "Science of Being Great",
+    "tagline": "A guided practice rooted in Wallace D. Wattles' classic.",
+    "description": "A modern, guided companion to The Science of Being Great — with readings, reflections, and daily practices designed to build character, confidence, and clarity.",
+    "features": [
+      "Full text of the original work, chapter by chapter",
+      "Daily guided practices",
+      "Reflections and journaling prompts",
+      "Audio narration"
+    ],
+    "subscription": "Free tier + premium subscription.",
+    "app_store_id": null,
+    "app_store_url": null,
+    "marketing_url": null,
+    "support_email": "support@mojibake.ai",
+    "screenshots": []
+  }
+]

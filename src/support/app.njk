@@ -1,0 +1,48 @@
+---
+layout: layout.njk
+pagination:
+  data: apps
+  size: 1
+  alias: app
+permalink: "/support/{{ app.slug }}/"
+eleventyComputed:
+  title: "{{ app.name }} Support – mojibake.ai"
+---
+
+<section class="page-hero">
+  <h1>{{ app.name }} Support</h1>
+  <p class="lede">We're here to help.</p>
+</section>
+
+<section class="legal-page">
+  <h2>Contact</h2>
+  <p>The fastest way to reach us: <a href="mailto:{{ app.support_email }}?subject={{ app.name }} support">{{ app.support_email }}</a></p>
+
+  <h2>Common questions</h2>
+  <h3>How do I manage my subscription?</h3>
+  <p>Subscriptions are managed through your Apple ID. Open <strong>Settings → [your name] → Subscriptions</strong> on your device, or visit the <a href="https://apps.apple.com/account/subscriptions">App Store subscriptions page</a>.</p>
+
+  <h3>How do I request a refund?</h3>
+  <p>Refund requests are handled by Apple. Visit <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> and sign in with your Apple ID to request a refund for a recent purchase.</p>
+
+  <h3>How do I delete my account or data?</h3>
+  <p>See the <a href="/privacy/{{ app.slug }}">{{ app.name }} privacy policy</a> for data-deletion instructions, or email <a href="mailto:{{ app.support_email }}">{{ app.support_email }}</a> and we'll help.</p>
+
+  <h2>Send us a message</h2>
+  <form class="contact-form" action="{{ site.contact_form_endpoint }}" method="POST">
+    <input type="hidden" name="_subject" value="{{ app.name }} support request">
+    <input type="hidden" name="app" value="{{ app.slug }}">
+    <div class="form-group">
+      <input type="text" name="name" placeholder="Your name" required>
+    </div>
+    <div class="form-group">
+      <input type="email" name="email" placeholder="Your email" required>
+    </div>
+    <div class="form-group">
+      <textarea name="message" placeholder="How can we help?" rows="6" required></textarea>
+    </div>
+    <button type="submit" class="submit-button">Send</button>
+  </form>
+
+  {% include "app-footer.njk" %}
+</section>

@@ -1,0 +1,18 @@
+---
+layout: layout.njk
+title: Terms of Service – mojibake.ai
+permalink: /terms/
+---
+
+<section class="page-hero">
+  <h1>Terms of Service</h1>
+  <p class="lede">Each Mojibake app has its own terms.</p>
+</section>
+
+<section class="legal-page">
+  <ul class="legal-index">
+    {% for app in apps %}
+    <li><a href="/terms/{{ app.slug }}/">{{ app.name }}</a></li>
+    {% endfor %}
+  </ul>
+</section>

@@ -1,0 +1,47 @@
+---
+layout: layout.njk
+pagination:
+  data: apps
+  size: 1
+  alias: app
+permalink: "/apps/{{ app.slug }}/"
+eleventyComputed:
+  title: "{{ app.name }} – mojibake.ai"
+  description: "{{ app.tagline }}"
+---
+
+<section class="page-hero">
+  <h1>{{ app.name }}</h1>
+  <p class="lede">{{ app.tagline }}</p>
+</section>
+
+<section class="app-detail">
+  <p class="large-text">{{ app.description }}</p>
+
+  {% if app.app_store_url %}
+  <p style="margin: 2rem 0;">
+    <a href="{{ app.app_store_url }}" class="submit-button" style="display: inline-block; text-decoration: none;">Get on the App Store</a>
+  </p>
+  {% endif %}
+
+  {% if app.features and app.features.length %}
+  <h2>Features</h2>
+  <ul class="features">
+    {% for feature in app.features %}
+    <li>{{ feature }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if app.subscription %}
+  <h2>Subscription</h2>
+  <p>{{ app.subscription }}</p>
+  {% endif %}
+
+  {% if app.marketing_url %}
+  <h2>Learn more</h2>
+  <p><a href="{{ app.marketing_url }}">{{ app.marketing_url }}</a></p>
+  {% endif %}
+
+  {% include "app-footer.njk" %}
+</section>

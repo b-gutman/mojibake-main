@@ -692,3 +692,287 @@ body {
     opacity: 1 !important;
   }
 }
+
+/* ===========================
+   Site header / nav (added in rework)
+   =========================== */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(255, 254, 249, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(157, 139, 124, 0.12);
+}
+
+.site-brand {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--dark-slate);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.75rem;
+}
+
+.site-nav a {
+  color: var(--dark-slate);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 400;
+  opacity: 0.75;
+  transition: opacity 0.2s ease;
+}
+
+.site-nav a:hover {
+  opacity: 1;
+}
+
+body {
+  padding-top: 64px;
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    padding: 0.75rem 1rem;
+  }
+  .site-nav {
+    gap: 1rem;
+  }
+  .site-nav a {
+    font-size: 0.85rem;
+  }
+}
+
+/* ===========================
+   Generic page header
+   =========================== */
+
+.page-hero {
+  padding: 120px 24px 80px;
+  text-align: center;
+  background: var(--ivory);
+}
+
+.page-hero h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 500;
+  color: var(--dark-slate);
+  margin-bottom: 1rem;
+}
+
+.page-hero .lede {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  color: var(--soft-brown);
+  line-height: 1.6;
+}
+
+/* ===========================
+   Apps index grid
+   =========================== */
+
+.apps-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.app-card {
+  display: block;
+  padding: 2rem;
+  background: var(--warm-white);
+  border: 1px solid rgba(157, 139, 124, 0.15);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--dark-slate);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.app-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.app-card h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.app-card p {
+  color: var(--soft-brown);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ===========================
+   App detail page
+   =========================== */
+
+.app-detail {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+.app-detail .features {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.app-detail .features li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(157, 139, 124, 0.12);
+  color: var(--dark-slate);
+}
+
+.app-detail .features li:last-child {
+  border-bottom: none;
+}
+
+.app-detail h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 3rem 0 1rem;
+}
+
+.app-footer-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(157, 139, 124, 0.15);
+  margin-top: 3rem;
+}
+
+.app-footer-links a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.app-footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   Work page pillars
+   =========================== */
+
+.pillars {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 24px 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.pillar {
+  display: block;
+  padding: 2.5rem;
+  background: var(--warm-white);
+  border: 1px solid rgba(157, 139, 124, 0.15);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--dark-slate);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.pillar:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.pillar h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.pillar p {
+  color: var(--soft-brown);
+  line-height: 1.6;
+}
+
+/* ===========================
+   Legal / text pages (privacy, terms, support)
+   =========================== */
+
+.legal-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 24px 100px;
+}
+
+.legal-page h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 2.5rem 0 1rem;
+  color: var(--dark-slate);
+}
+
+.legal-page h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.legal-page p,
+.legal-page li {
+  color: var(--dark-slate);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.legal-page ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.legal-page .meta {
+  color: var(--soft-brown);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.legal-index {
+  list-style: none;
+  padding: 0;
+}
+
+.legal-index li {
+  margin-bottom: 0.75rem;
+}
+
+.legal-index a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.legal-index a:hover {
+  text-decoration: underline;
+}
