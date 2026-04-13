@@ -2,3 +2,5 @@ node_modules/
 _site/
 .DS_Store
 *.log
+mojibake_favicon_set/
+mojibake_favicon_set.zip
