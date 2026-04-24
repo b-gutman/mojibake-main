@@ -59,5 +59,28 @@
     "support_email": "support@mojibake.ai",
     "legal_entity": "Mojibake Inc.",
     "screenshots": []
+  },
+  {
+    "slug": "zamwow",
+    "name": "ZamWow",
+    "category": "entertainment",
+    "tagline": "Song ID & live visuals for the dance floor.",
+    "description": "Identify every track playing around you and display stunning audio-reactive visualizations. Built for clubs, DJs, parties, and music lovers.",
+    "features": [
+      "Instant song recognition via ShazamKit",
+      "Patrol mode — continuous identification all night",
+      "41 audio-reactive Metal shader visualizers",
+      "Video/photo album backgrounds with opacity overlay",
+      "Offline signature queueing (Burning Man mode)",
+      "Push notifications via ntfy",
+      "External display support via HDMI/AirPlay"
+    ],
+    "subscription": "Free (2 hrs/week visualizer) · Pro $4.99/mo (12 hrs/week) · Venue $19.99/mo (unlimited, commercial use).",
+    "app_store_id": null,
+    "app_store_url": null,
+    "marketing_url": "https://mojibake.ai/apps/zamwow/",
+    "support_email": "support@mojibake.ai",
+    "legal_entity": "Mojibake Inc.",
+    "screenshots": []
   }
 ]

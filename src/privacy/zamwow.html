@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy – ZamWow – Mojibake Inc.</title>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/privacy.css">
+</head>
+<body>
+
+  <nav class="policy-nav">
+    <a href="/">mojibake.ai</a>
+  </nav>
+
+  <header class="policy-header">
+    <p class="app-name">ZamWow</p>
+    <h1>Privacy Policy</h1>
+    <p class="effective-date">Effective April 2026</p>
+  </header>
+
+  <main class="policy-body">
+
+    <h2>Introduction</h2>
+    <p>Mojibake Inc. ("we," "us," or "our") operates the ZamWow mobile application. This Privacy Policy explains how we collect, use, and protect your information when you use ZamWow.</p>
+    <p>By using ZamWow, you agree to the collection and use of information as described in this policy.</p>
+
+    <h2>Information We Collect</h2>
+
+    <h3>Microphone Audio</h3>
+    <p>ZamWow uses your device microphone to capture audio for song identification via Apple's ShazamKit framework. Audio is processed locally on your device to generate audio signatures (fingerprints). These signatures are sent to Apple's Shazam service for matching against their music catalog. <strong>Raw audio recordings are never stored, uploaded, or transmitted to our servers.</strong> Only compact audio signatures are sent to Apple for identification.</p>
+
+    <h3>Song Recognition Data</h3>
+    <p>When a song is identified, we store the following locally on your device:</p>
+    <ul>
+      <li>Song title and artist name</li>
+      <li>Shazam track identifier</li>
+      <li>Timestamp of recognition</li>
+      <li>Source context you provide (e.g., venue or DJ name)</li>
+      <li>Recognition mode (listen, patrol, or queued)</li>
+    </ul>
+    <p>This data is stored in a local JSON file on your device. It is not transmitted to our servers.</p>
+
+    <h3>Push Notifications (ntfy)</h3>
+    <p>If you configure an ntfy topic, song recognition results are sent as push notifications to the ntfy.sh service. This is entirely optional and user-configured. We do not operate the ntfy service. The data sent includes song title, artist, source context, and recognition mode. See the <a href="https://ntfy.sh/docs/">ntfy.sh privacy policy</a> for details on their data handling.</p>
+
+    <h3>Photo Library Access</h3>
+    <p>ZamWow can optionally access your photo library to display videos and photos as backgrounds for the visualizer. Photos and videos are accessed locally on your device and are never uploaded or transmitted. You can revoke this access at any time in iOS Settings.</p>
+
+    <h3>Subscription Information</h3>
+    <p>ZamWow offers subscription plans managed through Apple's StoreKit. All payment processing is handled entirely by Apple. We do not collect, store, or have access to your payment card details. We receive only confirmation of your subscription status from Apple.</p>
+
+    <h3>Usage Data</h3>
+    <p>We track visualizer usage time locally on your device to enforce subscription tier limits. This data is stored in UserDefaults and is not transmitted to our servers. We do not use advertising trackers or share usage data with third parties.</p>
+
+    <h2>How We Use Your Information</h2>
+    <ul>
+      <li>To identify songs playing in your environment</li>
+      <li>To display audio-reactive visualizations</li>
+      <li>To send push notifications when configured</li>
+      <li>To manage subscription tier limits</li>
+      <li>To maintain your local song history</li>
+    </ul>
+
+    <h2>Data Sharing</h2>
+    <p>We do not sell your personal data. We share data only with the following service providers, solely to operate the app:</p>
+    <ul>
+      <li><strong>Apple (ShazamKit)</strong> – audio signatures are sent to Apple's Shazam service for song identification</li>
+      <li><strong>Apple (StoreKit)</strong> – for subscription and payment processing</li>
+      <li><strong>ntfy.sh</strong> – if you configure push notifications, song data is sent to this third-party service (optional, user-configured)</li>
+    </ul>
+    <p><strong>No Firebase, no analytics services, no advertising networks.</strong> ZamWow operates with minimal data collection by design.</p>
+
+    <h2>Data Storage and Retention</h2>
+    <p>All song history, preferences, and usage data are stored locally on your device. No data is stored on our servers. You can delete your song history at any time within the app (Settings → Clear History), or by deleting the app.</p>
+
+    <h2>Offline Mode</h2>
+    <p>When offline, ZamWow saves audio signatures locally on your device for later matching. These signatures are automatically matched when internet connectivity is restored, then deleted from local storage. Signatures contain no identifiable personal information.</p>
+
+    <h2>Advertising</h2>
+    <p>ZamWow does not display advertisements and does not share data with advertising networks.</p>
+
+    <h2>Your Rights</h2>
+    <p>Depending on your location, you may have the following rights:</p>
+    <ul>
+      <li><strong>Access</strong> – View all data stored by the app (visible in the app's song history)</li>
+      <li><strong>Deletion</strong> – Delete all data via Settings → Clear History, or by deleting the app</li>
+      <li><strong>Correction</strong> – Edit source context on recognized songs</li>
+      <li><strong>Portability</strong> – Song history is stored as a standard JSON file on your device</li>
+    </ul>
+    <p>To exercise additional rights, contact us at <a href="mailto:privacy@mojibake.ai">privacy@mojibake.ai</a>.</p>
+
+    <h2>California Residents (CCPA)</h2>
+    <p>If you are a California resident, you have the right to know what personal information we collect, request its deletion, and opt out of its sale. We do not sell personal information. To submit a request, contact <a href="mailto:privacy@mojibake.ai">privacy@mojibake.ai</a>.</p>
+
+    <h2>European Users (GDPR)</h2>
+    <p>If you are located in the European Economic Area, we process your data based on your consent and our legitimate interest in providing the service. You have the right to access, rectify, erase, restrict processing, and port your data. Contact <a href="mailto:privacy@mojibake.ai">privacy@mojibake.ai</a> to exercise these rights.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>ZamWow is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected data from a child under 13, we will delete it promptly.</p>
+
+    <h2>Security</h2>
+    <p>ZamWow stores data locally on your device, protected by iOS device-level encryption. Audio signatures are transmitted to Apple's Shazam service over encrypted connections. No personal data is stored on our servers.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated effective date. We encourage you to review this page periodically.</p>
+
+    <h2>Contact Us</h2>
+    <p>If you have questions about this Privacy Policy, contact us at:</p>
+    <p>
+      <strong>Mojibake Inc.</strong><br>
+      <a href="mailto:privacy@mojibake.ai">privacy@mojibake.ai</a>
+    </p>
+
+  </main>
+
+  <footer class="policy-footer">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="sommsnap">SommSnap Privacy</a>
+      <a href="inspiration-and-gratitude">Inspiration & Gratitude Privacy</a>
+    </div>
+    <p>&copy; 2026 Mojibake Inc.</p>
+  </footer>
+
+</body>
+</html>
