@@ -30,29 +30,6 @@ description: Mojibake is the company behind Pipeworx, an open MCP gateway that g
   </div>
 </section>
 
-<section class="content-section dark">
-  <div class="container">
-    <h3 class="mission-subtitle">Built differently</h3>
-    <h2 class="section-title">A solo founder running an AI-agent fleet.</h2>
-    <p class="large-text">Mojibake was founded by Bruce Gutman — twenty-five years in software across developer relations, documentation, and product, and a repeat founder. Pipeworx is built and operated by one person directing a fleet of AI agents: the same kind of agentic software the product exists to serve.</p>
-  </div>
-</section>
-
-<section class="apps-strip">
-  <div class="container centered">
-    <h3 class="mission-subtitle">Also from Mojibake</h3>
-    <h2 class="section-title">Consumer apps from our studio.</h2>
-  </div>
-  <div class="apps-grid">
-    {% for app in apps %}
-    <a href="/apps/{{ app.slug }}/" class="app-card">
-      <h3>{{ app.name }}</h3>
-      <p>{{ app.tagline }}</p>
-    </a>
-    {% endfor %}
-  </div>
-</section>
-
 <section id="contact" class="content-section contact-section dark">
   <div class="container">
     <h2 class="section-title centered">Get in touch</h2>

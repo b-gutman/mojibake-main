@@ -697,28 +697,6 @@ body {
 }
 
 /* ===========================
-   Homepage apps strip
-   =========================== */
-
-.apps-strip {
-  padding: 100px 0 40px;
-  background: var(--warm-white);
-}
-
-.apps-strip .container {
-  padding: 0 24px;
-}
-
-.apps-strip .section-title,
-.apps-strip .mission-subtitle {
-  opacity: 1;
-}
-
-.apps-strip .apps-grid {
-  padding-top: 0;
-}
-
-/* ===========================
    App detail page
    =========================== */
 
