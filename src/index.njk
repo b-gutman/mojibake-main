@@ -1,110 +1,56 @@
 ---
 layout: layout.njk
-title: mojibake.ai – clarity, decoded
+title: Mojibake – infrastructure for the agent era
+description: Mojibake is the company behind Pipeworx, an open MCP gateway that grounds AI agents in live data from hundreds of real sources.
 ---
 
 <section class="hero">
-  <h1 class="hero-title">Clarity, decoded.</h1>
-</section>
-
-<section class="content-section">
-  <div class="container">
-    <h2 class="section-title">Modern life is loud.</h2>
-    <p class="large-text">Our minds are crowded, our spaces fill up, our choices multiply, and our days overflow with noise.</p>
-    <p class="large-text">We're surrounded by information, yet somehow clarity feels scarce. The signal is buried beneath endless static, and finding what matters feels harder every day.</p>
+  <p class="hero-eyebrow">Mojibake · the company behind Pipeworx</p>
+  <h1 class="hero-title">The data layer for AI&nbsp;agents.</h1>
+  <p class="hero-subtitle">We build Pipeworx — an open gateway that grounds AI agents in live data from thousands of real tools. No keys, no setup.</p>
+  <div class="hero-cta">
+    <a href="https://pipeworx.io" class="cta-button" target="_blank" rel="noopener">Explore Pipeworx&nbsp;↗</a>
+    <a href="/#contact" class="cta-button secondary">Get in touch</a>
   </div>
 </section>
 
 <section class="content-section dark">
   <div class="container">
-    <h2 class="section-title">At Mojibake, we believe clarity is the foundation of a good life.</h2>
+    <h2 class="section-title">Agents are only as good as their data.</h2>
+    <p class="large-text">Language models guess when they can't look things up. Ask one for a company's latest filing, a drug label, or yesterday's weather, and you'll get something fluent — and possibly wrong.</p>
+    <p class="large-text">Pipeworx fixes that with a single connection: an open MCP gateway that routes any agent to live, verifiable data — SEC filings, economic indicators, government records, prediction markets, weather, and hundreds more sources.</p>
   </div>
 </section>
 
 <section class="content-section">
   <div class="container">
-    <div class="benefit">
-      <h3 class="benefit-title">Clarity creates calm.</h3>
-      <p>A clear mind is a peaceful mind. When you know what matters, the noise fades away.</p>
-    </div>
-
-    <div class="benefit">
-      <h3 class="benefit-title">Clarity unlocks confidence.</h3>
-      <p>When you see things clearly, decisions become easier and action becomes natural.</p>
-    </div>
-
-    <div class="benefit">
-      <h3 class="benefit-title">Clarity helps us choose well.</h3>
-      <p>With clarity, you can move through the world with intention, grounded and purposeful.</p>
-    </div>
-  </div>
-</section>
-
-<section class="content-section accent">
-  <div class="container">
-    <h2 class="section-title centered">But clarity doesn't just appear—it's revealed.</h2>
-    <p class="large-text centered emphasis">It's decoded.</p>
-  </div>
-</section>
-
-<section class="content-section">
-  <div class="container">
-    <h2 class="section-title">Mojibake exists to help people decode the noise of modern living.</h2>
-    <p class="large-text">We build simple, beautiful tools that transform overwhelm into understanding, clutter into order, friction into ease, and confusion into insight.</p>
-    <p class="large-text">Whether you're choosing a wine, clearing your space, understanding your emotions, or improving your habits, Mojibake reveals the signal beneath the static.</p>
-    <p class="large-text">We build tools for humans and for AI — reducing complexity wherever we find it.</p>
+    <h2 class="section-title">One gateway. Thousands of live tools.</h2>
+    <p class="large-text">Agents connect once and discover tools on demand. It works out of the box with Claude, ChatGPT, Cursor, Gemini, and anything else that speaks MCP — with a free tier and no signup required.</p>
+    <p class="large-text"><a href="https://pipeworx.io" class="text-link" target="_blank" rel="noopener">pipeworx.io&nbsp;↗</a></p>
   </div>
 </section>
 
 <section class="content-section dark">
   <div class="container">
-    <h2 class="section-title">We don't do hacks, hustle, or over-complication.</h2>
-    <p class="large-text">Our technology feels like an exhale—minimal, warm, thoughtful, and quietly powerful.</p>
+    <h3 class="mission-subtitle">Built differently</h3>
+    <h2 class="section-title">A solo founder running an AI-agent fleet.</h2>
+    <p class="large-text">Mojibake was founded by Bruce Gutman — twenty-five years in software across developer relations, documentation, and product, and a repeat founder. Pipeworx is built and operated by one person directing a fleet of AI agents: the same kind of agentic software the product exists to serve.</p>
   </div>
 </section>
 
-<section class="content-section transformations">
-  <div class="container">
-    <div class="transform-pair">
-      <span class="from">Overwhelm</span>
-      <span class="arrow">→</span>
-      <span class="to">Understanding</span>
-    </div>
-    <div class="transform-pair">
-      <span class="from">Clutter</span>
-      <span class="arrow">→</span>
-      <span class="to">Order</span>
-    </div>
-    <div class="transform-pair">
-      <span class="from">Friction</span>
-      <span class="arrow">→</span>
-      <span class="to">Ease</span>
-    </div>
-    <div class="transform-pair">
-      <span class="from">Confusion</span>
-      <span class="arrow">→</span>
-      <span class="to">Insight</span>
-    </div>
-  </div>
-</section>
-
-<section class="content-section">
-  <div class="container">
-    <p class="large-text">Mojibake is for people who want a life that feels more intentional.</p>
-    <p class="large-text">A life with less friction and more meaning. A life where your inner and outer worlds make sense.</p>
-  </div>
-</section>
-
-<section class="content-section dark">
+<section class="apps-strip">
   <div class="container centered">
-    <h3 class="mission-subtitle">Different apps, one mission:</h3>
-    <h2 class="section-title">Reduce noise. Reveal clarity. Improve life.</h2>
+    <h3 class="mission-subtitle">Also from Mojibake</h3>
+    <h2 class="section-title">Consumer apps from our studio.</h2>
   </div>
-</section>
-
-<section class="hero final">
-  <h1 class="hero-title">Mojibake</h1>
-  <p class="hero-subtitle">Decode your life.</p>
+  <div class="apps-grid">
+    {% for app in apps %}
+    <a href="/apps/{{ app.slug }}/" class="app-card">
+      <h3>{{ app.name }}</h3>
+      <p>{{ app.tagline }}</p>
+    </a>
+    {% endfor %}
+  </div>
 </section>
 
 <section id="contact" class="content-section contact-section dark">

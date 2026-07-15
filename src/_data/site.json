@@ -1,6 +1,8 @@
 {
   "title": "mojibake.ai",
-  "tagline": "Clarity, decoded.",
+  "tagline": "infrastructure for the agent era",
+  "url": "https://mojibake.ai",
+  "default_description": "Mojibake is the company behind Pipeworx — an open MCP gateway that connects AI agents to live data from hundreds of real sources.",
   "contact_form_endpoint": "https://formspree.io/f/mldzgakj",
   "year": 2026
 }

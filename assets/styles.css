@@ -142,7 +142,7 @@ body {
 }
 
 .hero-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 700;
   line-height: 1.1;
@@ -168,24 +168,73 @@ body {
   animation: fadeInUp 1.2s ease-out 0.3s both;
 }
 
-.hero.final {
-  background: linear-gradient(135deg, var(--warm-black) 0%, var(--dark-slate) 100%);
+.hero-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--soft-brown);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 1.2s ease-out;
 }
 
-.hero.final::before {
-  background: linear-gradient(135deg, transparent 0%, rgba(139, 115, 85, 0.15) 50%, transparent 100%);
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2.5rem;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 1.2s ease-out 0.5s both;
 }
 
-.hero.final::after {
-  background: radial-gradient(circle, rgba(127, 29, 29, 0.12) 0%, transparent 70%);
-}
-
-.hero.final .hero-title {
+.cta-button {
+  display: inline-block;
+  padding: 0.9rem 1.75rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  background: var(--dark-slate);
   color: var(--ivory);
+  border-radius: 6px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: all 0.25s ease;
 }
 
-.hero.final .hero-subtitle {
-  color: rgba(245, 241, 232, 0.7);
+.cta-button:hover {
+  background: var(--warm-black);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(45, 41, 38, 0.2);
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: var(--dark-slate);
+  border: 1px solid rgba(45, 41, 38, 0.3);
+}
+
+.cta-button.secondary:hover {
+  background: rgba(45, 41, 38, 0.05);
+  box-shadow: none;
+}
+
+.text-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+.content-section.dark .text-link {
+  color: var(--beige);
 }
 
 /* ===========================
@@ -229,8 +278,6 @@ body {
 }
 
 .content-section.visible .large-text,
-.content-section.visible .benefit,
-.content-section.visible .transform-pair,
 .content-section.visible .mission-subtitle {
   animation: slideInFade 0.8s ease-out forwards;
 }
@@ -241,34 +288,6 @@ body {
 
 .content-section.visible .large-text:nth-child(3) {
   animation-delay: 0.2s;
-}
-
-.content-section.visible .benefit:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.content-section.visible .benefit:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.content-section.visible .benefit:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
-.content-section.visible .transform-pair:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.content-section.visible .transform-pair:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.content-section.visible .transform-pair:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
-.content-section.visible .transform-pair:nth-child(4) {
-  animation-delay: 0.4s;
 }
 
 /* Alternating warm backgrounds */
@@ -315,46 +334,6 @@ body {
   z-index: 0;
 }
 
-/* Accent section */
-.content-section.accent {
-  background: linear-gradient(135deg, var(--pale-gray) 0%, var(--ivory) 100%);
-  position: relative;
-}
-
-.content-section.accent::before {
-  content: '';
-  position: absolute;
-  top: -20%;
-  right: -20%;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(139, 115, 85, 0.06) 0%, transparent 70%);
-  border-radius: 50%;
-  animation: gentleFloat 25s ease-in-out infinite;
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Transformations section */
-.content-section.transformations {
-  background: var(--beige);
-  min-height: 50vh;
-  position: relative;
-}
-
-.content-section.transformations::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -50%;
-  width: 200%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent 0%, rgba(139, 115, 85, 0.04) 50%, transparent 100%);
-  animation: lightBeam 35s ease-in-out infinite;
-  pointer-events: none;
-  z-index: 0;
-}
-
 .container {
   max-width: 900px;
   width: 100%;
@@ -372,7 +351,7 @@ body {
    =========================== */
 
 .section-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 600;
   line-height: 1.2;
@@ -407,19 +386,6 @@ body {
   text-align: center;
 }
 
-.large-text.emphasis {
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
-  font-family: 'Playfair Display', serif;
-  font-weight: 500;
-  font-style: italic;
-  color: var(--accent);
-  margin-top: 1rem;
-}
-
-.content-section.dark .large-text.emphasis {
-  color: var(--beige);
-}
-
 .mission-subtitle {
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
@@ -433,91 +399,6 @@ body {
 
 .content-section.dark .mission-subtitle {
   color: rgba(245, 241, 232, 0.6);
-}
-
-/* ===========================
-   Benefits
-   =========================== */
-
-.benefit {
-  margin-bottom: 3rem;
-  opacity: 0;
-}
-
-.benefit:last-child {
-  margin-bottom: 0;
-}
-
-.benefit-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  color: var(--accent);
-  letter-spacing: -0.01em;
-}
-
-.benefit p {
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  line-height: 1.7;
-  color: var(--soft-brown);
-  font-weight: 300;
-}
-
-/* ===========================
-   Transformations
-   =========================== */
-
-.transform-pair {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 2.5rem;
-  font-size: clamp(1.25rem, 3vw, 2rem);
-  flex-wrap: wrap;
-  opacity: 0;
-}
-
-.transform-pair:last-child {
-  margin-bottom: 0;
-}
-
-.from {
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
-  color: var(--soft-brown);
-  text-decoration: line-through;
-  opacity: 0.5;
-  transition: all 0.3s ease;
-}
-
-.transform-pair:hover .from {
-  opacity: 0.3;
-  transform: translateX(-5px);
-}
-
-.arrow {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  color: var(--accent);
-  font-weight: 300;
-  transition: transform 0.3s ease;
-}
-
-.transform-pair:hover .arrow {
-  transform: translateX(10px);
-}
-
-.to {
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
-  color: var(--dark-slate);
-  transition: all 0.3s ease;
-}
-
-.transform-pair:hover .to {
-  color: var(--accent);
-  transform: translateX(5px) scale(1.05);
 }
 
 /* ===========================
@@ -622,6 +503,12 @@ body {
   color: var(--ivory);
 }
 
+.footer .footer-motto {
+  font-style: italic;
+  color: rgba(245, 241, 232, 0.35);
+  margin-bottom: 0.5rem;
+}
+
 /* ===========================
    Responsive
    =========================== */
@@ -635,15 +522,6 @@ body {
   .hero {
     min-height: 80vh;
   }
-
-  .transform-pair {
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .benefit {
-    margin-bottom: 2.5rem;
-  }
 }
 
 @media (max-width: 480px) {
@@ -651,18 +529,14 @@ body {
     padding: 60px 16px;
   }
 
-  .transform-pair {
+  .hero-cta {
     flex-direction: column;
-    gap: 0.5rem;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .hero-cta .cta-button {
     text-align: center;
-  }
-
-  .arrow {
-    transform: rotate(90deg);
-  }
-
-  .transform-pair:hover .arrow {
-    transform: rotate(90deg) translateX(10px);
   }
 }
 
@@ -686,8 +560,6 @@ body {
 
   .section-title,
   .large-text,
-  .benefit,
-  .transform-pair,
   .mission-subtitle {
     opacity: 1 !important;
   }
@@ -714,7 +586,7 @@ body {
 }
 
 .site-brand {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
   color: var(--dark-slate);
@@ -767,7 +639,7 @@ body {
 }
 
 .page-hero h1 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 500;
   color: var(--dark-slate);
@@ -812,7 +684,7 @@ body {
 }
 
 .app-card h3 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
@@ -825,6 +697,28 @@ body {
 }
 
 /* ===========================
+   Homepage apps strip
+   =========================== */
+
+.apps-strip {
+  padding: 100px 0 40px;
+  background: var(--warm-white);
+}
+
+.apps-strip .container {
+  padding: 0 24px;
+}
+
+.apps-strip .section-title,
+.apps-strip .mission-subtitle {
+  opacity: 1;
+}
+
+.apps-strip .apps-grid {
+  padding-top: 0;
+}
+
+/* ===========================
    App detail page
    =========================== */
 
@@ -832,6 +726,10 @@ body {
   max-width: 760px;
   margin: 0 auto;
   padding: 40px 24px 80px;
+}
+
+.app-detail .store-cta {
+  margin: 2rem 0;
 }
 
 .app-detail .features {
@@ -851,7 +749,7 @@ body {
 }
 
 .app-detail h2 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 1.8rem;
   font-weight: 500;
   margin: 3rem 0 1rem;
@@ -877,47 +775,6 @@ body {
 }
 
 /* ===========================
-   Work page pillars
-   =========================== */
-
-.pillars {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 40px 24px 100px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.pillar {
-  display: block;
-  padding: 2.5rem;
-  background: var(--warm-white);
-  border: 1px solid rgba(157, 139, 124, 0.15);
-  border-radius: 4px;
-  text-decoration: none;
-  color: var(--dark-slate);
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.pillar:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent);
-}
-
-.pillar h2 {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.8rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-}
-
-.pillar p {
-  color: var(--soft-brown);
-  line-height: 1.6;
-}
-
-/* ===========================
    Legal / text pages (privacy, terms, support)
    =========================== */
 
@@ -928,7 +785,7 @@ body {
 }
 
 .legal-page h2 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
   margin: 2.5rem 0 1rem;
