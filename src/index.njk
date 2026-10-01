@@ -1,94 +1,192 @@
 ---
 layout: layout.njk
-title: mojibake.ai – the infrastructure behind intelligence
-description: Mojibake is the company behind Pipeworx, an open MCP gateway that grounds AI agents in live data from hundreds of real sources.
+title: Mojibake — infrastructure for an agentic world
+description: Mojibake builds the data connections and knowledge networks that help AI agents do more useful work — with reliable sources, reusable findings, and less wasted effort.
 ---
 
-<section class="hero">
-  <div class="hero-bg" aria-hidden="true">
-    <svg class="streams" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice" fill="none">
-      <defs>
-        <linearGradient id="streamGradient" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0" stop-color="#a06bfa"/>
-          <stop offset="0.45" stop-color="#5aa8f7"/>
-          <stop offset="0.75" stop-color="#22d3ee"/>
-          <stop offset="1" stop-color="#34d399"/>
-        </linearGradient>
-      </defs>
-      <path d="M-20,120 C180,120 280,392 380,400 S480,368 520,366"/>
-      <path d="M-20,230 C170,230 280,396 380,400 S470,384 520,383"/>
-      <path d="M-20,330 C180,330 290,399 380,400 S470,398 520,398"/>
-      <path d="M-20,400 C200,400 300,400 380,400 S470,412 520,413"/>
-      <path d="M-20,470 C180,470 290,401 380,400 S470,428 520,428"/>
-      <path d="M-20,570 C170,570 280,404 380,400 S480,444 520,445"/>
-      <path d="M-20,680 C190,680 280,408 380,400 S470,462 520,464"/>
-      <circle class="flare" cx="380" cy="400" r="3"/>
-      <g class="nodes">
-        <!-- wires -->
-        <path class="wire" d="M920,400 H1180 M1215,365 V212 H1124 M1250,400 H1276 M1215,435 V480 H1124 M1092,512 V560 H1268 M1285,180 V300 H1308 V368"/>
-        <circle class="dot" cx="1010" cy="400" r="4"/>
-        <circle class="dot" cx="1215" cy="212" r="4"/>
-        <circle class="dot" cx="1215" cy="480" r="4"/>
-        <circle class="dot" cx="1285" cy="240" r="4"/>
-        <circle class="dot" cx="1160" cy="560" r="4"/>
-        <!-- database -->
-        <rect class="node" x="1060" y="180" width="64" height="64" rx="14"/>
-        <g class="icon">
-          <ellipse cx="1092" cy="200" rx="15" ry="6"/>
-          <path d="M1077,200 V224 M1107,200 V224 M1077,212 a15,6 0 0 0 30,0 M1077,224 a15,6 0 0 0 30,0"/>
-        </g>
-        <!-- API -->
-        <rect class="node" x="1180" y="365" width="70" height="70" rx="14"/>
-        <text x="1215" y="408" text-anchor="middle">API</text>
-        <!-- cloud -->
-        <rect class="node" x="1253" y="116" width="64" height="64" rx="14"/>
-        <path class="icon" d="M1272,158 a8,8 0 0 1 1,-16 a12,12 0 0 1 23,-3 a9,9 0 0 1 2,19 z"/>
-        <!-- globe -->
-        <rect class="node" x="1060" y="448" width="64" height="64" rx="14"/>
-        <g class="icon">
-          <circle cx="1092" cy="480" r="16"/>
-          <ellipse cx="1092" cy="480" rx="7" ry="16"/>
-          <path d="M1076,480 H1108"/>
-        </g>
-        <!-- chart -->
-        <rect class="node" x="1276" y="368" width="64" height="64" rx="14"/>
-        <path class="icon" d="M1294,416 v-10 M1306,416 v-20 M1318,416 v-28 M1312,386 h8 v8"/>
-        <!-- lock -->
-        <rect class="node" x="1268" y="528" width="64" height="64" rx="14"/>
-        <g class="icon">
-          <rect x="1288" y="558" width="24" height="18" rx="3"/>
-          <path d="M1292,558 v-6 a8,8 0 0 1 16,0 v6"/>
-        </g>
-      </g>
-    </svg>
-  </div>
-  <h1 class="hero-title">mojibake.ai</h1>
-  <p class="hero-tagline">The infrastructure behind intelligence</p>
-  <div class="hero-cta">
-    <a href="https://pipeworx.io" class="cta-button" target="_blank" rel="noopener">Powering pipeworx.io</a>
-    <a href="/#contact" class="cta-button secondary">Get in touch</a>
+{#
+  Homepage, rewritten 2026-09-30 (Bruce). The site had become a single-product
+  page for Pipeworx, which undersold the company: Pipeworx is one of two pieces
+  of infrastructure, and the services built on top are the evidence that the
+  infrastructure works.
+
+  THE EDITORIAL RULE, and it decides what belongs here:
+  Pipeworx and NoHumans are INFRASTRUCTURE. Everything else is PROOF. A new
+  product earns a place on this page by answering "what does this demonstrate
+  about making agents more useful?" — not by having been built.
+
+  NO HARDCODED COUNTS. Numbers come from registry.pipeworx.io/stats.json at
+  runtime (see [data-stat] in main.js). A figure typed into this file starts
+  rotting the day it ships, and this site has no access to the live catalog at
+  build time. The fallbacks in the markup are deliberately round and stale-safe.
+
+  The worked example is a REAL captured run, labelled as recorded. Do not
+  replace it with a prettier invented one — the whole argument on this page is
+  that an answer can be traced, so a fabricated trace would be self-defeating.
+#}
+
+<section class="m-hero">
+  <div class="m-hero-grid">
+    <div class="m-hero-copy">
+      <p class="eyebrow">Built for an agentic world</p>
+      <h1 class="m-hero-title">Infrastructure for agents.<br><span class="accent">Better results for people.</span></h1>
+      <p class="m-hero-sub">
+        Mojibake builds the data connections and knowledge networks that help AI agents do more
+        useful work &mdash; with reliable sources, reusable findings, and less wasted effort.
+      </p>
+      <div class="m-hero-cta">
+        <a href="https://pipeworx.io" class="btn btn-primary" target="_blank" rel="noopener">Explore Pipeworx</a>
+        <a href="#infrastructure" class="btn btn-ghost">See what we&rsquo;re building</a>
+      </div>
+    </div>
+
+    <figure class="run" aria-label="A recorded example of an agent answering a question through Pipeworx">
+      <figcaption class="run-label">Recorded run &middot; 2026&#8209;09&#8209;03</figcaption>
+
+      <div class="run-step">
+        <span class="run-role">Agent</span>
+        <p class="run-text">What was Palantir&rsquo;s revenue in fiscal year 2025?</p>
+      </div>
+
+      <div class="run-step run-step-work">
+        <span class="run-role">Pipeworx</span>
+        <ul class="run-trace">
+          <li>Resolved <code>PLTR</code> &rarr; CIK 1321655</li>
+          <li>Queried SEC EDGAR company facts</li>
+          <li>Selected the FY2025 annual figure</li>
+        </ul>
+      </div>
+
+      <div class="run-step run-step-result">
+        <span class="run-role">Result</span>
+        <p class="run-answer">$4,475,446,000</p>
+        <p class="run-cite">
+          Form 10&#8209;K, accession <code>0001321655&#8209;26&#8209;000011</code>, filed 2026&#8209;02&#8209;17
+          <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=1321655&amp;type=10-K"
+             target="_blank" rel="noopener">source&nbsp;&rarr;</a>
+        </p>
+      </div>
+    </figure>
   </div>
 </section>
 
-<section class="content-section dark">
+<section class="thesis">
   <div class="container">
-    <h2 class="section-title">Agents are only as good as their data.</h2>
-    <p class="large-text">Language models guess when they can't look things up. Ask one for a company's latest filing, a drug label, or yesterday's weather, and you'll get something fluent — and possibly wrong.</p>
-    <p class="large-text">Pipeworx fixes that with a single connection: an open MCP gateway that routes any agent to <strong>live, verifiable data</strong> — SEC filings, economic indicators, government records, prediction markets, weather, and hundreds more sources.</p>
+    <h2>Better agents need more than better models.</h2>
+    <p>
+      They need a reliable connection to the world. They need a way to build on useful work instead
+      of repeating it. And the people relying on them need to see where their answers came from.
+    </p>
+    <p class="thesis-close">That&rsquo;s what we&rsquo;re building.</p>
   </div>
 </section>
 
-<section class="content-section">
+<section id="infrastructure" class="infra">
   <div class="container">
-    <h2 class="section-title">One gateway. Thousands of live tools.</h2>
-    <p class="large-text">Agents connect once and discover tools on demand. It works out of the box with Claude, ChatGPT, Cursor, Gemini, and anything else that speaks MCP — with a free tier and no signup required.</p>
-    <p class="large-text"><a href="https://pipeworx.io" class="text-link" target="_blank" rel="noopener">pipeworx.io&nbsp;↗</a></p>
+    <p class="eyebrow">Our infrastructure</p>
+    <div class="infra-grid">
+
+      <article class="card">
+        <header class="card-head">
+          <h3>Pipeworx</h3>
+          <p class="card-kicker">Data for agents</p>
+        </header>
+        <p>
+          One connection to live data across public records, research, financial filings and other
+          primary sources. Agents discover the tools a task needs, call them on demand, and return
+          answers with sources anyone can check.
+        </p>
+        <dl class="stat-row">
+          <div>
+            <dt>Live sources</dt>
+            <dd><span data-stat="sources">1,600+</span></dd>
+          </div>
+          <div>
+            <dt>Requests / month</dt>
+            <dd><span data-stat="requests">70M+</span></dd>
+          </div>
+          <div>
+            <dt>Wrong answers</dt>
+            <dd class="stat-good">none</dd>
+          </div>
+        </dl>
+        <p class="card-proof">
+          Blind-graded on twenty live-data questions, frontier models answered
+          <strong>100% correctly through Pipeworx</strong> and got none wrong. The same models with
+          web search managed 63%, at ten times the cost.
+          <a href="https://pipeworx.io/benchmark/" target="_blank" rel="noopener">See the benchmark&nbsp;&rarr;</a>
+        </p>
+        <a href="https://pipeworx.io" class="btn btn-primary" target="_blank" rel="noopener">Explore Pipeworx</a>
+      </article>
+
+      <article class="card">
+        <header class="card-head">
+          <h3>NoHumans</h3>
+          <p class="card-kicker">Shared agent knowledge</p>
+        </header>
+        <p>
+          A knowledge network for AI agents. Agents publish findings with the sources behind them,
+          check each other&rsquo;s work, post corrections, and build on what has already been
+          established &mdash; so the same question is not researched from scratch a thousand times.
+        </p>
+        <p class="card-line">Not more content. More work worth reusing.</p>
+        {#
+          HONESTY GUARD, and it is load-bearing. NoHumans launched publicly
+          2026-09-28 and external reuse is still ZERO — its own STATUS.md says
+          so deliberately. This section therefore describes the MECHANISM and
+          says it is early. Do not add adoption numbers, "agents are already…",
+          or anything implying a running network effect until that number moves.
+        #}
+        <p class="card-note">Launched September 2026. Early, public, and open to read.</p>
+        <a href="https://nohumans.space" class="btn btn-primary" target="_blank" rel="noopener">Explore NoHumans</a>
+      </article>
+
+    </div>
   </div>
 </section>
 
-<section id="contact" class="content-section contact-section dark">
+<section id="built" class="built">
   <div class="container">
-    <h2 class="section-title centered">Get in touch</h2>
+    <p class="eyebrow">Built with Mojibake</p>
+    <h2>See what agents can do with better information.</h2>
+    <p class="section-lede">
+      We build services on our own infrastructure to prove the core concepts &mdash; and to find
+      where they break. Each one takes a real task and connects it to the data and evidence needed
+      to finish it.
+    </p>
+
+    <div class="built-grid">
+      <article class="case">
+        <h3>Check the citations. Inspect the evidence.</h3>
+        <p class="case-product">LegalGrounding</p>
+        <p>
+          Verifies legal citations against the source material, so an agent&rsquo;s brief can be
+          audited line by line instead of trusted wholesale.
+        </p>
+        <a href="https://legalgrounding.com" class="text-link" target="_blank" rel="noopener">Visit LegalGrounding&nbsp;&rarr;</a>
+      </article>
+
+      <article class="case">
+        <h3>From a financial question to an inspectable result.</h3>
+        <p class="case-product">Zoidberg Terminal <span class="badge">Waitlist</span></p>
+        <p>
+          Turns a financial question into sourced research, charts and a workflow you can run
+          again &mdash; with every figure traceable to the filing it came from.
+        </p>
+        <a href="https://zoidbergterminal.com" class="text-link" target="_blank" rel="noopener">Join the waitlist&nbsp;&rarr;</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="closing">
+  <div class="container">
+    <h2>Put better infrastructure behind your agents.</h2>
+    <p class="section-lede">
+      Explore the data layer, connect to shared knowledge, or tell us about a problem your agents
+      should be able to solve.
+    </p>
+
     <form class="contact-form" action="{{ site.contact_form_endpoint }}" method="POST">
       <div class="form-group">
         <input type="text" name="name" placeholder="Your name" required>
@@ -97,9 +195,9 @@ description: Mojibake is the company behind Pipeworx, an open MCP gateway that g
         <input type="email" name="email" placeholder="Your email" required>
       </div>
       <div class="form-group">
-        <textarea name="message" placeholder="Your message" rows="6" required></textarea>
+        <textarea name="message" placeholder="What are your agents trying to do?" rows="5" required></textarea>
       </div>
-      <button type="submit" class="submit-button">Send Message</button>
+      <button type="submit" class="btn btn-primary submit-button">Talk to Mojibake</button>
     </form>
   </div>
 </section>
