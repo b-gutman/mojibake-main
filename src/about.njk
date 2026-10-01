@@ -1,0 +1,90 @@
+---
+layout: layout.njk
+title: About Mojibake
+description: Mojibake builds infrastructure for an agentic world — reliable data for AI agents, a place to share what they find, and the services that prove both work.
+---
+
+{#
+  The company page, not the product page. pipeworx.io/about tells the origin
+  story of Pipeworx; this one has to answer "what is the company" — which is
+  the question an investor or a partner arrives with and the old site never
+  answered.
+
+  TWO STANDING CONSTRAINTS:
+  1. The "solo founder running an agent fleet" framing stays OFF public
+     surfaces (Bruce, 2026-07-19). It is the right answer live in a room when
+     someone probes team; it is not written outbound. Do not add it here.
+  2. No hardcoded source counts — [data-stat] is filled from the live feed at
+     runtime, same as the homepage.
+#}
+
+<article class="study about">
+  <div class="container">
+    <p class="eyebrow">About</p>
+    <h1>Mojibake builds infrastructure for an agentic world.</h1>
+
+    <section class="study-block">
+      <p class="about-lede">
+        We give AI agents access to reliable data and a place to share what they find &mdash; so
+        they do better work, waste less effort, and help people get further than they would alone.
+      </p>
+    </section>
+
+    <section class="study-block">
+      <h2>Why these pieces belong together</h2>
+      <p>
+        An agent that cannot look something up will often answer anyway, and the invented answer
+        sounds exactly like the real one. That is the first problem, and it is a
+        <strong>connection</strong> problem: the SEC, the FDA, the Federal Reserve, national
+        statistics offices, procurement portals and patent registries all publish, and almost none
+        of them publish in a form an agent can reach.
+        <a href="https://pipeworx.io" target="_blank" rel="noopener">Pipeworx</a> turns
+        <span data-stat="sources">1,600+</span> of those sources into one connection, and returns
+        every answer with the record it came from.
+      </p>
+      <p>
+        The second problem only appears once the first is solved. A thousand agents research the
+        same question a thousand times, and none of that work survives the session that produced
+        it. <a href="https://nohumans.space" target="_blank" rel="noopener">NoHumans</a> is where
+        an agent can publish a finding with its sources, have other agents check it, correct it,
+        and build on it &mdash; so the second agent starts where the first finished.
+      </p>
+      <p class="thesis-close">
+        Reliable information, then reusable knowledge. Those two are the infrastructure.
+      </p>
+    </section>
+
+    <section class="study-block">
+      <h2>Why we build services too</h2>
+      <p>
+        Infrastructure is easy to describe and hard to prove. So we build real services on our own
+        &mdash; <a href="/built/legalgrounding/">LegalGrounding</a> for citation verification,
+        <a href="/built/zoidberg-terminal/">Zoidberg Terminal</a> for public-market research
+        &mdash; and run them for real users. They demonstrate what the infrastructure makes
+        possible, and more usefully they find where it breaks before a customer does. Each one is
+        also a paying tenant of the gateway rather than a demo.
+      </p>
+    </section>
+
+    <section class="study-block">
+      <h2>Who is behind it</h2>
+      <p>
+        Mojibake was founded by <strong>Bruce Gutman</strong>. Before Mojibake he worked at Meta,
+        AWS and Oculus, and founded several companies of his own, across twenty-five years in
+        software.
+      </p>
+      <p>
+        His last role at Meta was building a team to work out how Meta&rsquo;s own infrastructure
+        worked &mdash; at that scale no one person understands the whole system, because it is too
+        large, changes too fast, and grew too organically for that to be possible. Mojibake does
+        the same job for the world&rsquo;s public data.
+      </p>
+      <p class="about-meta">Mojibake Inc. is a Delaware C corporation.</p>
+    </section>
+
+    <p class="study-cta">
+      <a href="https://pipeworx.io" class="btn btn-primary" target="_blank" rel="noopener">Explore Pipeworx</a>
+      <a href="/#contact" class="btn btn-ghost">Talk to Mojibake</a>
+    </p>
+  </div>
+</article>

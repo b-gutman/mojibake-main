@@ -1,0 +1,80 @@
+---
+layout: layout.njk
+title: Zoidberg Terminal — a financial question to an inspectable result | Mojibake
+description: A case study in turning a question about a public company into sourced research, where every number says where it came from and when it was read.
+---
+
+{#
+  Same five-part structure as the LegalGrounding study. The limits section here
+  is lifted almost directly from the product's own README, which already states
+  plainly what it is not — that honesty is the reason it is worth showing, so
+  do not trim it to make the page sell harder.
+#}
+
+<article class="study">
+  <div class="container">
+    <p class="eyebrow"><a href="/#built" class="crumb">Built with Mojibake</a></p>
+    <h1>From a financial question to an inspectable result.</h1>
+    <p class="study-product">
+      Zoidberg Terminal <span class="badge">Waitlist</span> &middot;
+      <a href="https://zoidbergterminal.com" target="_blank" rel="noopener">zoidbergterminal.com&nbsp;&rarr;</a>
+    </p>
+
+    <section class="study-block">
+      <h2>The task</h2>
+      <p>
+        Someone wants to understand a public company. Today that means a filings site, a charting
+        tool, a prediction market, a macro series and five open tabs &mdash; then the work of
+        remembering which number came from where, and how old each one was.
+      </p>
+    </section>
+
+    <section class="study-block">
+      <h2>The information required</h2>
+      <p>
+        What the company filed and when. Who has been buying or selling it. What prediction markets
+        are pricing about it. What the macro series underneath it actually says. Four different
+        institutions, four different interfaces, four different update cadences &mdash; and no
+        shared notion of how fresh any of it is.
+      </p>
+    </section>
+
+    <section class="study-block">
+      <h2>What it does</h2>
+      <p>
+        Type a ticker and get a grid of panels drawn from those sources at once. Every call routes
+        through Pipeworx rather than to a provider directly, which is what makes the next part
+        possible: <strong>every number on screen carries the source it came from and the moment it
+        was read</strong>. Where a source published nothing, the terminal says so instead of
+        showing a zero &mdash; an absent figure and a figure of zero are different facts, and
+        conflating them is how a research tool misleads quietly.
+      </p>
+    </section>
+
+    <section class="study-block">
+      <h2>The result</h2>
+      <p>
+        It works and it is in daily use. Because every call is attributed and timed, a result can be
+        handed to someone else and checked rather than taken on trust &mdash; which is the whole
+        point of putting this infrastructure underneath it.
+      </p>
+    </section>
+
+    <section class="study-block study-limits">
+      <h2>What remains limited</h2>
+      <p>
+        <strong>It is early, and it is narrow on purpose.</strong> It is not a trading terminal:
+        there is no execution and no portfolio accounting. It is not real&#8209;time for equities,
+        because public sources cannot honestly provide that &mdash; crypto and prediction markets
+        are live, equities are end&#8209;of&#8209;day unless you bring your own market-data key.
+        And it is not advice. It shows what filings and markets say; what that means is yours.
+      </p>
+      <p>Access is by waitlist while it is still moving quickly.</p>
+    </section>
+
+    <p class="study-cta">
+      <a href="https://zoidbergterminal.com" class="btn btn-primary" target="_blank" rel="noopener">Join the waitlist</a>
+      <a href="/#contact" class="btn btn-ghost">Talk to Mojibake</a>
+    </p>
+  </div>
+</article>

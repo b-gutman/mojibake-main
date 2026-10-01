@@ -3,7 +3,7 @@
   "tagline": "the infrastructure behind intelligence",
   "url": "https://mojibake.ai",
   "default_description": "Mojibake builds infrastructure for an agentic world \u2014 the data connections and knowledge networks that help AI agents do more useful work, with reliable sources and reusable findings.",
-  "assets_version": "20260930-1",
+  "assets_version": "20260930-2",
   "contact_form_endpoint": "https://formspree.io/f/mldzgakj",
   "year": 2026
 }

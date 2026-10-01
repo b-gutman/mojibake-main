@@ -1,0 +1,83 @@
+---
+layout: layout.njk
+title: LegalGrounding — checking citations against the source | Mojibake
+description: A case study in verifying legal citations against source material before a brief is filed, built on Mojibake's data infrastructure.
+---
+
+{#
+  Case study structure, fixed across all of these: the task, the information
+  required, what it does, the result, and WHAT REMAINS LIMITED. That last
+  section is not a disclaimer and should never be softened — it is what makes
+  the other four credible. Every figure here comes from the product's own
+  README and eval harness; do not round them up.
+#}
+
+<article class="study">
+  <div class="container">
+    <p class="eyebrow"><a href="/#built" class="crumb">Built with Mojibake</a></p>
+    <h1>Check the citations. Inspect the evidence.</h1>
+    <p class="study-product">LegalGrounding &middot; <a href="https://legalgrounding.com" target="_blank" rel="noopener">legalgrounding.com&nbsp;&rarr;</a></p>
+
+    <section class="study-block">
+      <h2>The task</h2>
+      <p>
+        A lawyer is about to file a brief. Somewhere in it are citations that came out of a model,
+        or out of a hurry. One of them may not exist. Another may exist but stand for something
+        other than what the brief says it does. A third may have been overruled last year.
+        The judge will find out either way; the question is whether the lawyer finds out first.
+      </p>
+    </section>
+
+    <section class="study-block">
+      <h2>The information required</h2>
+      <p>
+        Not an opinion about the brief &mdash; the actual record. Whether each cited case exists.
+        Whether the volume, reporter, page and year in the citation point at that case. What the
+        case actually held, in its own words. And whether it is still good law, or has been
+        overruled, abrogated or called into doubt since.
+      </p>
+    </section>
+
+    <section class="study-block">
+      <h2>What it does</h2>
+      <p>
+        LegalGrounding reads the brief, extracts every citation, and checks each one in four tiers
+        through Mojibake&rsquo;s data layer: existence, then the citation tuple, then whether the
+        quoted proposition is grounded in the opinion, then negative treatment. Every call routes
+        through Pipeworx to CourtListener, so each verdict comes back attached to the document it
+        was decided from rather than to a model&rsquo;s recollection of it.
+      </p>
+    </section>
+
+    <section class="study-block">
+      <h2>The result</h2>
+      <p>
+        Live and self-serve, with four check tiers and a REST API. Evaluated across roughly
+        <strong>4,760 citations in about 160 real federal filings</strong>. The
+        <em>Mata&nbsp;v.&nbsp;Avianca</em> pattern &mdash; the brief that made fabricated citations
+        a known failure &mdash; runs nightly as a regression test: <strong>six of six fabrications
+        caught</strong>, with the genuine control citations left alone.
+      </p>
+    </section>
+
+    <section class="study-block study-limits">
+      <h2>What remains limited</h2>
+      <p>
+        <strong>Not found is not the same as fabricated,</strong> and the product says so rather
+        than guessing. A citation that cannot be matched may be unpublished, mis-transcribed, or
+        simply outside the corpus &mdash; so it is reported as unverified, not as invented. Treating
+        those as equivalent would produce exactly the confident wrong answer the tool exists to
+        catch.
+      </p>
+      <p>
+        It is also barely marketed. The product works; getting it in front of the lawyers who need
+        it is the open problem, not the checking.
+      </p>
+    </section>
+
+    <p class="study-cta">
+      <a href="https://legalgrounding.com" class="btn btn-primary" target="_blank" rel="noopener">Visit LegalGrounding</a>
+      <a href="/#contact" class="btn btn-ghost">Talk to Mojibake</a>
+    </p>
+  </div>
+</article>

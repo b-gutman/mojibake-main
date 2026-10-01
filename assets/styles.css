@@ -1124,3 +1124,67 @@ body {
   .m-hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .m-hero { padding-top: 3.5rem; }
 }
+
+/* ===========================
+   Case studies + About (2026-09-30)
+   ===========================
+   One narrow measure, generous spacing, and the limits block visually equal to
+   the rest rather than demoted to fine print. If "what remains limited" starts
+   looking like a disclaimer, the page has stopped being a case study.
+   =========================== */
+
+.study { padding: 4rem 1.5rem 5rem; }
+.study .container { max-width: 44rem; margin: 0 auto; }
+.study h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin: 0 0 0.6rem;
+}
+.study .crumb { color: var(--muted); text-decoration: none; }
+.study .crumb:hover { color: var(--copper); }
+.study-product {
+  font-family: var(--mono, ui-monospace, Menlo, monospace);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 2.5rem;
+}
+.study-product a { color: var(--copper); text-decoration: none; }
+.study-product a:hover { text-decoration: underline; }
+
+.study-block { margin-bottom: 2.4rem; }
+.study-block h2 {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-family: var(--mono, ui-monospace, Menlo, monospace);
+  color: var(--copper);
+  margin: 0 0 0.7rem;
+  font-weight: 600;
+}
+.study-block p {
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.7;
+  margin: 0 0 0.9rem;
+}
+.study-block p:last-child { margin-bottom: 0; }
+.study-block strong { color: var(--text); }
+.study-block a { color: var(--copper); }
+
+/* The limits block is set apart to be READ, not to be skipped. */
+.study-limits {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--copper);
+  border-radius: 12px;
+  padding: 1.5rem 1.6rem;
+}
+
+.study-cta { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 2.5rem; }
+
+.about-lede { font-size: 1.12rem !important; color: var(--text) !important; }
+.about-meta { font-size: 0.85rem !important; }
