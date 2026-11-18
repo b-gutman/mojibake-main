@@ -1188,3 +1188,30 @@ body {
 
 .about-lede { font-size: 1.12rem !important; color: var(--text) !important; }
 .about-meta { font-size: 0.85rem !important; }
+
+/* Founders on /about. Three across; stacked below 640px with a capped photo. */
+.founders {
+  list-style: none;
+  margin: 1.2rem 0 1.8rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+.founder img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  margin-bottom: 0.75rem;
+}
+.founder strong { display: block; color: var(--text); font-weight: 600; }
+.founder-title { display: block; font-size: 0.85rem; color: var(--copper); margin-bottom: 0.5rem; }
+.study-block .founder p { font-size: 0.92rem; line-height: 1.6; }
+@media (max-width: 640px) {
+  .founders { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+  .founder img { max-width: 220px; }
+}
